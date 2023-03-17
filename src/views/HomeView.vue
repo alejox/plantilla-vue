@@ -1,5 +1,11 @@
 <template>
-  <h1 class="text-primary">Hello World</h1>
+  <h1 class="text-primary">H1</h1>
+  <h2 class="text-primary">H2</h2>
+  <h3 class="text-primary">H3</h3>
+  <h4 class="text-primary">H4</h4>
+  <h5 class="text-primary">H5</h5>
+  <h6 class="text-primary">H6</h6>
+  <p>Texto</p>
   <button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
   <button type="button" class="btn btn-success">Success</button>
@@ -10,19 +16,12 @@
   <button type="button" class="btn btn-dark">Dark</button>
   <button type="button" class="btn btn-link">Link</button>
   <b-button>hola desde vue-bootstrap</b-button>
+  <p class="font">tamaño 40px</p>
 
-  <div>
-  <b-badge variant="primary">Primary</b-badge>
-  <b-badge variant="secondary">Secondary</b-badge>
-  <b-badge variant="success">Success</b-badge>
-  <b-badge variant="danger">Danger</b-badge>
-  <b-badge variant="warning">Warning</b-badge>
-  <b-badge variant="info">Info</b-badge>
-  <b-badge variant="light">Light</b-badge>
-  <b-badge variant="dark">Dark</b-badge>
-</div>
 </template>
 
 <script setup></script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+
+</style>
