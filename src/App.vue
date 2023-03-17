@@ -1,32 +1,9 @@
 <template>
-  <main>
-    <router-view />
-  </main>
+  <HomeView />
 </template>
 
-<script>
-export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
-};
+<script setup>
+import HomeView from './views/HomeView.vue';
 </script>
 
-<style lang="scss">
-:root {
-  --bs-body-font-family: 'Poppins', sans-serif;
-  --bs-body-font-size: 1.6rem;
-  *{
-    margin: 0;
-    padding: 0;
-  }
-}
-html {
-  font-size: 62.5%;
-}
-body {
-  font-size: 1.6rem;
-}
-</style>
+<style lang="css" scoped></style>
