@@ -17,11 +17,12 @@
   <button type="button" class="btn btn-link">Link</button>
   <b-button>hola desde vue-bootstrap</b-button>
   <p class="font">tamaño 40px</p>
-
 </template>
 
 <script setup></script>
 
 <style lang="scss" scoped>
-
+.font {
+  font-size: 4rem;
+}
 </style>
