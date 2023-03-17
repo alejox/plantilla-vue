@@ -12,9 +12,8 @@ export default defineConfig({
     },
   },
   css: {
-    loaderOptions: {
-      sass: {
-        // Importa las variables de Bootstrap para que puedas modificarlas
+    preprocessorOptions: {
+      scss: {
         additionalData: `@import "@/assets/styles.scss";`,
       },
     },

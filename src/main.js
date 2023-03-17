@@ -2,9 +2,11 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import BootstrapVue3 from 'bootstrap-vue-3';
-import './assets/styles.scss';
-
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './assets/sass/_typography.scss';
+
+// import './assets/styles.scss';
 
 const app = createApp(App);
 
