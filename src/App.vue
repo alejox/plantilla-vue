@@ -1,12 +1,14 @@
 <template>
   <h1>{{ $t('hello') }}</h1>
   <HomeView />
-  <BaseInput v-model="formData.name" label="Nombre" type="text" id="name" />
+  <BaseInput v-model="formData.name" label="Nombre" type="text" id="name" required/>
   <BaseInput
     v-model="formData.lastName"
     label="Apellido"
     type="text"
-    id="lastName" />
+    id="lastName"
+    required />
+
   <pre>{{ formData }}</pre>
 </template>
 

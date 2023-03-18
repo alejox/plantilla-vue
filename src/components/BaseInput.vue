@@ -1,7 +1,7 @@
 <template>
   <div class="input">
     <label class="input__label" :for="id"
-      ><span v-if="require">*</span>{{ label }}</label
+      ><span v-show="required">*</span> {{ label }}</label
     >
     <input
       v-bind="$attrs"
@@ -26,13 +26,13 @@ defineProps({
   id: {
     type: String,
   },
-  require: {
-    type: Boolean,
-    default: false,
-  },
   modelValue: {
     type: [String, Number],
     default: '',
+  },
+  required: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>
@@ -52,7 +52,7 @@ defineProps({
   }
   &__field {
     padding: 4px 16px;
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
