@@ -1,7 +1,15 @@
 <template>
   <div class="input">
-    <label class="input__label" :for="id"><span>*</span>{{ label }}</label>
-    <input class="input__field" :placeholder="placeholder" :id="id" />
+    <label class="input__label" :for="id"
+      ><span v-if="require">*</span>{{ label }}</label
+    >
+    <input
+      v-bind="$attrs"
+      class="input__field"
+      :placeholder="placeholder"
+      :id="id"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)" />
   </div>
 </template>
 
@@ -17,6 +25,14 @@ defineProps({
   },
   id: {
     type: String,
+  },
+  require: {
+    type: Boolean,
+    default: false,
+  },
+  modelValue: {
+    type: [String, Number],
+    default: '',
   },
 });
 </script>
@@ -36,6 +52,9 @@ defineProps({
   }
   &__field {
     padding: 4px 16px;
+    &:focus{
+      outline: none;
+    }
   }
 }
 </style>
