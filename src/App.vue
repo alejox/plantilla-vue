@@ -1,25 +1,33 @@
 <template>
   <h1>{{ $t('hello') }}</h1>
   <HomeView />
-  <BaseInput v-model="formData.name" label="Nombre" type="text" id="name" required/>
   <BaseInput
-    v-model="formData.lastName"
-    label="Apellido"
+    v-model="formData.name"
+    label="Nombre"
     type="text"
-    id="lastName"
-    required />
+    id="name"
+    required
+  />
+  <BaseSelect
+    :options="data"
+    v-model="formData.selectedOption"
+    label="Select a category"
+    required
+  />
 
   <pre>{{ formData }}</pre>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import BaseInput from './components/BaseInput.vue';
 import HomeView from './views/HomeView.vue';
+
+const data = [ 'Audi', 'Mercedez', 'BMW'];
 
 const formData = ref({
   name: '',
   lastName: '',
+  selectedOption: '',
 });
 </script>
 

@@ -6,9 +6,11 @@ import 'bootstrap-vue-3/dist/bootstrap-vue-3.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/sass/_typography.scss';
 import { i18n } from './plugins/i18n.js';
+import globalComponents from './plugins/global';
 
 const app = createApp(App)
   .use(router)
   .use(BootstrapVue3)
-  .use(i18n);
+  .use(i18n)
+  .use(globalComponents);
 app.mount('#app');
