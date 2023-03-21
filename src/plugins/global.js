@@ -1,6 +1,6 @@
 const globalComponents = {
   install(app) {
-    const components = import.meta.globEager('./../global/**/*.vue');
+    const components = import.meta.globEager('./../components/global/**/*.vue');
 
     Object.entries(components).forEach(([path, component]) => {
       app.component(

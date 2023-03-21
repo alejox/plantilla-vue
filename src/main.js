@@ -7,10 +7,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './assets/sass/_typography.scss';
 import { i18n } from './plugins/i18n.js';
 import globalComponents from './plugins/global';
+import mixing from './plugins/mixing';
 
 const app = createApp(App)
-  .use(router)
-  .use(BootstrapVue3)
-  .use(i18n)
-  .use(globalComponents);
+
+app.use(router)
+app.use(BootstrapVue3)
+app.use(i18n)
+app.use(globalComponents);
+app.mixin(mixing)
+
 app.mount('#app');

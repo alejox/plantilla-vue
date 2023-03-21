@@ -16,7 +16,11 @@
   <button type="button" class="btn btn-dark">Dark</button>
   <button type="button" class="btn btn-link">Link</button>
   <b-button>hola desde vue-bootstrap</b-button>
+  <b-button variant="primary">hola desde vue-bootstrap</b-button>
   <p class="font">tamaño 40px</p>
+
+  <img class="img-pic" :src="getFile('images', 'bgLogin', 'jpg')" alt="" />
+  <img :src="getFile('icons', 'Accounts')" alt="" />
 </template>
 
 <script setup></script>
@@ -24,5 +28,8 @@
 <style lang="scss" scoped>
 .font {
   font-size: 4rem;
+}
+.img-pic {
+  width: 30rem;
 }
 </style>
